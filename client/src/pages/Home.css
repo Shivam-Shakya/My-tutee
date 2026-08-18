@@ -1,0 +1,28 @@
+.home {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.home section {
+  scroll-margin-top: 90px;
+}
+
+/* Home Page Responsive */
+@media (max-width: 1024px) {
+  .home {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,837 @@
+/* ═══════════════════════════════════════════
+   Student Profile Page Styles
+   ═══════════════════════════════════════════ */
+
+.profile-page.student {
+  padding: 120px 20px 60px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+  min-height: 100vh;
+}
+
+.profile-page.student .profile-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Loading State */
+.profile-page.student .profile-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 16px;
+}
+
+.profile-page.student .profile-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #0ea5e9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* ═══════════════════════════════════════════
+   Profile Hero Card
+   ═══════════════════════════════════════════ */
+.profile-page.student .profile-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: linear-gradient(135deg, #1E3A8A 0%, #FF8C00 100%);
+  color: #fff;
+  padding: 32px 36px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.35);
+  margin-bottom: 36px;
+}
+
+.profile-page.student .profile-hero__left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Avatar */
+.profile-page.student .profile-avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: default;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile-page.student .profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-page.student .avatar-initials {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  user-select: none;
+}
+
+.profile-page.student .avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.profile-page.student .profile-avatar:hover .avatar-overlay {
+  opacity: 1;
+}
+
+/* Hero info */
+.profile-page.student .profile-hero__info h3 {
+  margin: 0 0 6px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.profile-page.student .role-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.profile-page.student .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-page.student .meta-pill {
+  background: rgba(255, 255, 255, 0.16);
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Profile Hero Actions */
+.profile-page.student .profile-hero__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Edit / Save / Cancel buttons in hero */
+.profile-page.student .edit-profile-btn {
+  padding: 11px 26px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.profile-page.student .edit-profile-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.profile-page.student .edit-profile-btn.save {
+  background: #fff;
+  color: #0ea5e9;
+  border-color: #fff;
+}
+
+.profile-page.student .edit-profile-btn.save:hover {
+  background: #e0f2fe;
+}
+
+.profile-page.student .edit-profile-btn.cancel {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.profile-page.student .edit-profile-btn.cancel:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-page.student .edit-profile-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ═══════════════════════════════════════════
+   View Mode Styles
+   ═══════════════════════════════════════════ */
+
+.profile-page.student .profile-view {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.profile-page.student .view-section {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.profile-page.student .view-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.profile-page.student .view-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 16px;
+}
+
+.profile-page.student .view-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.profile-page.student .view-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-page.student .view-item.full {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+}
+
+.profile-page.student .view-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.profile-page.student .view-value {
+  font-size: 1rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.profile-page.student .tags-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.profile-page.student .tag {
+  padding: 6px 14px;
+  background: #f0fdf4;
+  color: #059669;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #d1fae5;
+}
+
+.profile-page.student .bio-text {
+  color: #374151;
+  line-height: 1.7;
+  margin: 8px 0 0;
+}
+
+/* Course Purchase */
+.profile-page.student .course-selection-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile-page.student .course-selection-note {
+  margin: 0;
+  color: #374151;
+}
+
+.profile-page.student .main-course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.profile-page.student .main-course-card {
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-page.student .main-course-card:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.12);
+}
+
+.profile-page.student .main-course-card.active {
+  border-color: #0ea5e9;
+  background: #f0f9ff;
+}
+
+.profile-page.student .main-course-icon {
+  font-size: 1.4rem;
+}
+
+.profile-page.student .main-course-title {
+  font-weight: 700;
+  color: #111827;
+}
+
+.profile-page.student .main-course-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.profile-page.student .sub-course-block {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  background: #f9fafb;
+}
+
+.profile-page.student .sub-course-block h4 {
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.profile-page.student .sub-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-page.student .sub-course-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 12px;
+}
+
+.profile-page.student .sub-course-row.active {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.profile-page.student .sub-course-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2937;
+}
+
+.profile-page.student .sub-course-price {
+  font-weight: 700;
+  color: #0f766e;
+  white-space: nowrap;
+}
+
+.profile-page.student .course-total-bar {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.profile-page.student .course-total-bar strong {
+  color: #0f766e;
+  font-size: 1.1rem;
+}
+
+.profile-page.student .purchase-error {
+  margin: 10px 0 0;
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.profile-page.student .proceed-payment-btn {
+  margin-top: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #ff8c00 100%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-page.student .purchase-summary {
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #eff6ff;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-page.student .purchase-summary__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.profile-page.student .purchase-summary__column {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.profile-page.student .purchase-label {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.profile-page.student .purchase-value {
+  color: #111827;
+  font-weight: 600;
+}
+
+.profile-page.student .purchase-value.price {
+  color: #0f766e;
+  font-size: 1.1rem;
+}
+
+.profile-page.student .selected-sub-course-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-page.student .selected-sub-course-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+
+/* ═══════════════════════════════════════════
+   Edit Mode Styles
+   ═══════════════════════════════════════════ */
+
+.profile-page.student .profile-edit {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.profile-page.student .edit-section {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.profile-page.student .edit-section:last-of-type {
+  border-bottom: none;
+}
+
+.profile-page.student .edit-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 20px;
+}
+
+.profile-page.student .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.profile-page.student .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-page.student .form-field.full {
+  grid-column: 1 / -1;
+}
+
+.profile-page.student .form-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.profile-page.student .form-field input,
+.profile-page.student .form-field select,
+.profile-page.student .form-field textarea {
+  padding: 12px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fafafa;
+}
+
+.profile-page.student .form-field input:focus,
+.profile-page.student .form-field select:focus,
+.profile-page.student .form-field textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+  background: #fff;
+}
+
+.profile-page.student .form-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Chip Selector */
+.profile-page.student .chip-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profile-page.student .chip {
+  padding: 8px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-page.student .chip:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+}
+
+.profile-page.student .chip.active {
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Action Buttons */
+.profile-page.student .profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.profile-page.student .btn-edit,
+.profile-page.student .btn-save,
+.profile-page.student .btn-cancel {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-page.student .btn-edit {
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  color: #fff;
+  border: none;
+}
+
+.profile-page.student .btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
+.profile-page.student .btn-save {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  border: none;
+}
+
+.profile-page.student .btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.profile-page.student .btn-save:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-page.student .btn-cancel {
+  background: #fff;
+  color: #6b7280;
+  border: 1.5px solid #e5e7eb;
+}
+
+.profile-page.student .btn-cancel:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+/* ═══════════════════════════════════════════
+   Embedded Mode (Inside Dashboard)
+   ═══════════════════════════════════════════ */
+.profile-page.student.embedded {
+  padding: 0;
+  background: transparent;
+  min-height: auto;
+}
+
+.profile-page.student.embedded .profile-container {
+  max-width: 100%;
+}
+
+.profile-page.student.embedded .profile-hero {
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .profile-page.student {
+    padding: 110px 20px 50px;
+  }
+
+  .profile-page.student .profile-container {
+    max-width: 800px;
+  }
+
+  .profile-page.student .profile-hero {
+    padding: 28px 30px;
+  }
+
+  .profile-page.student .form-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page.student {
+    padding: 100px 16px 40px;
+  }
+
+  .profile-page.student .profile-container {
+    max-width: 100%;
+  }
+
+  .profile-page.student .profile-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-page.student .profile-hero {
+    flex-direction: column;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .profile-page.student .profile-hero__left {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-page.student .profile-hero__info h3 {
+    font-size: 1.4rem;
+  }
+
+  .profile-page.student .hero-meta {
+    justify-content: center;
+  }
+
+  .profile-page.student .profile-hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .profile-page.student .edit-profile-btn {
+    width: 100%;
+  }
+
+  .profile-page.student .profile-view,
+  .profile-page.student .profile-edit {
+    padding: 24px 20px;
+  }
+
+  .profile-page.student .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-page.student .view-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-page.student .main-course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-page.student .sub-course-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .profile-page.student .sub-course-price {
+    margin-left: 28px;
+  }
+
+  .profile-page.student .profile-actions {
+    flex-direction: column;
+  }
+
+  .profile-page.student .btn-edit,
+  .profile-page.student .btn-save,
+  .profile-page.student .btn-cancel {
+    width: 100%;
+  }
+
+  .profile-page.student .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-page.student .avatar-initials {
+    font-size: 1.8rem;
+  }
+
+  .profile-page.student .meta-pill {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page.student {
+    padding: 90px 12px 30px;
+  }
+
+  .profile-page.student .profile-hero {
+    padding: 20px 15px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+  }
+
+  .profile-page.student .profile-hero__info h3 {
+    font-size: 1.2rem;
+  }
+
+  .profile-page.student .role-badge {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+
+  .profile-page.student .profile-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-page.student .avatar-initials {
+    font-size: 1.5rem;
+  }
+
+  .profile-page.student .profile-view,
+  .profile-page.student .profile-edit {
+    padding: 20px 15px;
+    border-radius: 16px;
+  }
+
+  .profile-page.student .view-section h3,
+  .profile-page.student .edit-section h3 {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .profile-page.student .view-label {
+    font-size: 0.8rem;
+  }
+
+  .profile-page.student .view-value {
+    font-size: 0.9rem;
+  }
+
+  .profile-page.student .form-field label {
+    font-size: 0.85rem;
+  }
+
+  .profile-page.student .form-field input,
+  .profile-page.student .form-field select,
+  .profile-page.student .form-field textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .profile-page.student .btn-edit,
+  .profile-page.student .btn-save,
+  .profile-page.student .btn-cancel {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .profile-page.student .tag {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .profile-page.student .chip {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .profile-page.student .selected-sub-course-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

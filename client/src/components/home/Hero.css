@@ -1,0 +1,175 @@
+.hero {
+  width: 100%;
+  background: linear-gradient(135deg, #1E3A8A 0%, #FF8C00 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btns-outline {
+  background: transparent;
+  color: #333;
+  background-color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.btns-outline:hover {
+  background-color: #FF8C00;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #1E3A8A;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1E40AF;
+}
+
+.hero-image {
+  text-align: center;
+  width: 500px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-overlays {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.hero-overlays .herobackgrounds {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 220px;
+    padding-bottom: 150px;
+    min-height: auto;
+  }
+  .hero-container {
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 250px;
+    padding-bottom: 150px;
+    min-height: auto;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 250px;
+    padding-bottom: 120px;
+  }
+
+  .hero-container {
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+}

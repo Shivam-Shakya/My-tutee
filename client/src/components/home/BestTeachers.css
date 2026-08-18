@@ -1,0 +1,369 @@
+.best-teachers {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.containers {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.best-teachers h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.best-teachers-p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.best-teachers-carousel {
+  position: relative;
+}
+
+.teachers-swiper {
+  padding-bottom: 44px;
+}
+
+.teacher-carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #d6d6d6;
+  background: #ffffff;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 5;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.teacher-carousel-btn:hover {
+  background: #1e3a8a;
+  color: #fff;
+  border-color: #1e3a8a;
+}
+
+.teacher-carousel-prev {
+  left: -16px;
+}
+
+.teacher-carousel-next {
+  right: -16px;
+}
+
+.best-teachers .swiper-pagination {
+  bottom: 8px !important;
+}
+
+.best-teachers .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 0.45;
+  background: #7b7b7b;
+}
+
+.best-teachers .swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 99px;
+  opacity: 1;
+  background: #1e3a8a;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bestteacher-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.bestteacher-card:hover {
+  transform: translateY(-8px);
+}
+
+.bestteacher-photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.bestteacher-info {
+  padding: 25px;
+}
+
+.bestteacher-info h3 {
+  color: #333;
+  font-size: 20px;
+}
+
+.subject {
+  color: #FF8C00;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.experience {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+}
+
+.rating {
+  color: #ffc107;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.rating span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.bioData {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.experience {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+}
+
+.rating {
+  color: #ffc107;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.rating span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.bio {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicator.active {
+  background: #007bff;
+}
+
+@media (max-width: 1024px) {
+  .best-teachers {
+    padding: 60px 20px;
+  }
+
+  .best-teachers h2 {
+    font-size: 2rem;
+  }
+
+  .best-teachers-p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .bestteacher-card {
+    max-width: 500px;
+  }
+
+  .teacher-carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .teacher-carousel-prev {
+    left: -10px;
+  }
+
+  .teacher-carousel-next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .best-teachers {
+    padding: 50px 15px;
+  }
+
+  .best-teachers h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .best-teachers-p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  .slide-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .slide-btn.prev {
+    left: -50px;
+  }
+
+  .slide-btn.next {
+    right: -50px;
+  }
+
+  .bestteacher-info {
+    padding: 20px;
+  }
+
+  .bestteacher-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .bestteacher-photo {
+    height: 200px;
+  }
+
+  .teacher-carousel-btn {
+    width: 38px;
+    height: 38px;
+    top: 40%;
+  }
+
+  .teacher-carousel-prev {
+    left: -8px;
+  }
+
+  .teacher-carousel-next {
+    right: -8px;
+  }
+
+  .subject {
+    font-size: 13px;
+  }
+
+  .experience,
+  .bioData,
+  .bio {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-teachers {
+    padding: 40px 10px;
+  }
+
+  .best-teachers h2 {
+    font-size: 1.5rem;
+  }
+
+  .best-teachers-p {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  .slideshow-container {
+    padding: 0 10px;
+  }
+
+  .slide-btn {
+    display: none;
+  }
+
+  .bestteacher-card {
+    border-radius: 10px;
+  }
+
+  .bestteacher-info {
+    padding: 15px;
+  }
+
+  .bestteacher-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .bestteacher-photo {
+    height: 180px;
+  }
+
+  .teacher-carousel-btn {
+    width: 34px;
+    height: 34px;
+    top: 38%;
+  }
+
+  .teacher-carousel-prev {
+    left: -4px;
+  }
+
+  .teacher-carousel-next {
+    right: -4px;
+  }
+
+  .slide-indicators {
+    margin-top: 20px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}

@@ -1,0 +1,186 @@
+.teacher-details-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 120px 0 46px;
+}
+
+.teacher-details-container {
+  width: min(1120px, 94%);
+  margin: 0 auto;
+}
+
+.back-to-tutors {
+  display: inline-flex;
+  text-decoration: none;
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.back-to-tutors:hover {
+  background: #1d4ed8;
+}
+
+.teacher-profile-card {
+  margin-top: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(2, 6, 23, 0.08);
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+.teacher-profile-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.teacher-profile-content {
+  padding: 22px;
+}
+
+.teacher-profile-content h1 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.teacher-main-subject {
+  margin: 8px 0 0;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.teacher-profile-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+}
+
+.teacher-profile-grid p {
+  margin: 0;
+  color: #334155;
+}
+
+.teacher-about {
+  margin-top: 14px;
+  color: #334155;
+  line-height: 1.72;
+}
+
+.teacher-action-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.action-btn.message {
+  background: #2563eb;
+}
+
+.action-btn.phone {
+  background: #059669;
+}
+
+.action-btn.pay {
+  background: #f97316;
+}
+
+.teacher-reviews {
+  margin-top: 24px;
+}
+
+.teacher-reviews h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.teacher-reviews-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.teacher-review-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.teacher-review-card h3 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.review-rating {
+  margin: 8px 0 0;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.teacher-review-card p {
+  margin-top: 8px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.teacher-not-found {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+
+.teacher-not-found h2 {
+  margin: 0;
+}
+
+.teacher-not-found p {
+  margin: 8px 0 14px;
+  color: #475569;
+}
+
+@media (max-width: 940px) {
+  .teacher-profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-profile-image {
+    min-height: 260px;
+    max-height: 320px;
+  }
+
+  .teacher-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-details-page {
+    padding-top: 104px;
+  }
+
+  .teacher-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
