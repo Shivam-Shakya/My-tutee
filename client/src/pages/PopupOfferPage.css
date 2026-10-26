@@ -1,0 +1,132 @@
+.popup-offer-page {
+  min-height: calc(100vh - 120px);
+  padding: 120px 20px 48px;
+  background: radial-gradient(circle at top right, rgba(255, 140, 0, 0.24), transparent 44%),
+    linear-gradient(180deg, #eff4ff 0%, #f7faff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-offer-card {
+  width: min(980px, 100%);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #d7e2f3;
+  box-shadow: 0 24px 44px rgba(14, 48, 116, 0.18);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.popup-offer-banner {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.popup-offer-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.popup-offer-tag {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1d4ea9;
+}
+
+.popup-offer-content h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  color: #112b5d;
+}
+
+.popup-offer-description {
+  margin: 0;
+  color: #2f436a;
+  line-height: 1.7;
+}
+
+.popup-offer-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.popup-offer-meta div {
+  background: #f5f9ff;
+  border: 1px solid #d6e3f6;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.popup-offer-meta span {
+  font-size: 0.78rem;
+  color: #597099;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.popup-offer-meta strong {
+  color: #102955;
+  font-size: 1rem;
+}
+
+.popup-offer-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.popup-offer-primary,
+.popup-offer-secondary {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.popup-offer-primary {
+  flex: 1;
+  color: #fff;
+  background: linear-gradient(135deg, #1947af, #f07a1f);
+}
+
+.popup-offer-secondary {
+  background: #e7effc;
+  color: #10336f;
+}
+
+@media (max-width: 900px) {
+  .popup-offer-card {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-offer-banner {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup-offer-page {
+    padding: 100px 12px 26px;
+  }
+
+  .popup-offer-content {
+    padding: 20px;
+  }
+
+  .popup-offer-meta {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,132 @@
+.cta-section {
+  padding: 84px 20px;
+  position: relative;
+  background-image:
+    linear-gradient(120deg, rgba(15, 23, 42, 0.68), rgba(30, 58, 138, 0.52)),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.42), rgba(15, 23, 42, 0.64)),
+    url("../../assets/teachers/teach4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.cta-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 18px;
+  padding: 34px 26px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.cta-wrap h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.cta-wrap p {
+  margin: 10px auto 0;
+  color: #f1f5f9;
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.subscribe-form {
+  margin: 20px auto 0;
+  width: min(100%, 680px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscribe-input::placeholder {
+  color: #64748b;
+}
+
+.subscribe-input:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.28);
+}
+
+.subscribe-btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  background: #ffffff;
+  color: #1e3a8a;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+.subscribe-message {
+  margin: 14px 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.subscribe-message.success {
+  color: #bbf7d0;
+}
+
+.subscribe-message.error {
+  color: #fecaca;
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 56px 16px;
+    background-attachment: scroll;
+  }
+
+  .cta-wrap {
+    border-radius: 14px;
+    padding: 24px 18px;
+  }
+
+  .subscribe-form {
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 44px 12px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscribe-btn,
+  .subscribe-input {
+    width: 100%;
+  }
+}

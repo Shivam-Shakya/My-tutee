@@ -1,0 +1,186 @@
+.find-tutors-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding-top: 118px;
+}
+
+.find-tutors-container {
+  width: min(1120px, 94%);
+  margin: 0 auto;
+}
+
+.find-tutors-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #f97316 100%);
+  padding: 44px 0 54px;
+  color: #ffffff;
+}
+
+.find-tutors-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.find-tutors-hero p {
+  margin: 12px 0 0;
+  max-width: 760px;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.find-tutors-search {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.find-tutors-search input {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.find-tutors-search input:focus {
+  outline: 2px solid #bfdbfe;
+}
+
+.find-tutors-search button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  background: #f97316;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.find-tutors-search button:hover {
+  background: #ea580c;
+}
+
+.find-tutors-results {
+  padding: 34px 0 52px;
+}
+
+.find-tutors-results-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.find-tutors-results-head h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.find-tutors-results-head span {
+  color: #475569;
+  font-weight: 600;
+}
+
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tutor-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.06);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.tutor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(2, 6, 23, 0.12);
+}
+
+.tutor-card-body {
+  padding: 18px;
+}
+
+.tutor-card-body h3 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.tutor-subject {
+  margin: 8px 0 0;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.tutor-location {
+  margin: 4px 0 0;
+  color: #475569;
+}
+
+.tutor-description {
+  margin: 10px 0 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.tutor-meta {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.find-tutors-empty {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 30px;
+  text-align: center;
+}
+
+.find-tutors-empty h3 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.find-tutors-empty p {
+  margin: 8px 0 0;
+  color: #475569;
+}
+
+@media (max-width: 1000px) {
+  .tutors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .find-tutors-page {
+    padding-top: 104px;
+  }
+
+  .find-tutors-search {
+    grid-template-columns: 1fr;
+  }
+
+  .find-tutors-search button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .tutors-grid {
+    grid-template-columns: 1fr;
+  }
+}

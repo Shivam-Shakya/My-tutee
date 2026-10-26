@@ -1,0 +1,756 @@
+/* ════════════════════════════════════════════════════════════════════════════════ */
+/*                            ABOUT PAGE – MINIMAL DESIGN                            */
+/* ════════════════════════════════════════════════════════════════════════════════ */
+
+.about-page {
+  width: 100%;
+  background: #f8fafc;
+  overflow-x: hidden;
+  padding-top: 120px;
+  /* offset fixed navbar (top-info-bar ~46px + navbar-container ~60px) */
+  scroll-behavior: smooth;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-section-head {
+  max-width: 760px;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+  scroll-margin-top: 130px;
+  /* ensure space from fixed navbar when jumping to sections */
+}
+
+.about-section-head h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+  color: #1e293b;
+}
+
+.about-section-head p {
+  margin: 0.7rem auto 0;
+  color: #475569;
+  line-height: 1.72;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+}
+
+.about-section-head-vision {
+  margin-top: clamp(1.8rem, 5vw, 3rem);
+}
+
+.about-section-head-light h2,
+.about-section-head-light p {
+  color: #ffffff;
+}
+
+/* ─── HERO SECTION ─── */
+
+.about-hero-simple {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../assets//About\ Header\ 1.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 100px 30px 100px;
+  text-align: center;
+  color: white;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.about-hero-inner h1 {
+  font-size: 74px;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.5px;
+}
+
+.about-tagline {
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  opacity: 0.98;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-intro {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.about-btn-primary,
+.about-btn-outline {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.about-btn-primary {
+  background: white;
+  color: #1e3a8a;
+  margin-right: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.about-btn-primary:hover {
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.about-btn-outline {
+  color: white;
+  border: 2px solid white;
+}
+
+.about-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ─── WHAT WE OFFER SECTION ─── */
+
+.about-what-we-offer {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: white;
+}
+
+.about-introduction-extended {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.about-introduction-extended h2,
+.about-mission-vision h2,
+.about-teachers h2,
+.about-results h2,
+.about-testimonials h2,
+.about-teaching-process h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.about-introduction-extended p,
+.about-section-subtitle,
+.about-teaching-process p {
+  color: #475569;
+  line-height: 1.7;
+  max-width: 780px;
+}
+
+.about-what-we-offer h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.about-what-we-offer>.about-container>p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.courses-grid-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card-simple {
+  background: linear-gradient(135deg, var(--card-color), var(--card-color));
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.course-card-simple:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-icon-simple {
+  font-size: 2.5rem;
+}
+
+.course-card-simple h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ─── WHY CHOOSE US SECTION ─── */
+
+.about-why-choose {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: #f8fafc;
+}
+
+.about-mission-vision {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.mission-vision-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.2rem, 4vw, 2.4rem);
+  align-items: center;
+  padding: clamp(0.6rem, 2vh, 1.1rem) 0;
+}
+
+.vision-row {
+  margin-top: 0;
+}
+
+.mission-vision-copy {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: clamp(1.6rem, 4vh, 2.4rem) clamp(0.2rem, 1vw, 0.4rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.mission-vision-copy h2 {
+  margin: 0 0 0.8rem;
+  color: #0f172a;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+}
+
+.mission-vision-copy p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.mission-vision-points {
+  margin: 1.05rem 0 0;
+  padding-left: 1.2rem;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.mission-vision-points li {
+  margin-bottom: 0.4rem;
+}
+
+.mission-vision-points li:last-child {
+  margin-bottom: 0;
+}
+
+.mission-vision-media {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.14);
+}
+
+.mission-vision-media img {
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-teachers {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: #f8fafc;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.4rem;
+}
+
+.teacher-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 1.35rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.teacher-image {
+  width: 150px;
+  height: 220px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid rgba(30, 58, 138, 0.16);
+  display: block;
+  flex-shrink: 0;
+}
+
+.teacher-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.teacher-details h3 {
+  margin: 0 0 0.5rem;
+  color: #1e293b;
+}
+
+.teacher-qualification {
+  margin: 0 0 0.5rem;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.teacher-details p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.teacher-experience {
+  overflow-wrap: anywhere;
+}
+
+
+.about-testimonials {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: #f8fafc;
+}
+
+.about-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.4rem;
+}
+
+.about-testimonial-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.3rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.about-testimonial-card h3 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.about-testimonial-role {
+  margin: 0.35rem 0 0;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.about-testimonial-stars {
+  margin: 0.7rem 0 0;
+  color: #f59e0b;
+  letter-spacing: 0.04em;
+}
+
+.about-testimonial-card p:last-child {
+  margin: 0.65rem 0 0;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.about-teaching-process {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: #ffffff;
+}
+
+.teaching-process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.process-step-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.1rem;
+  text-align: center;
+}
+
+.process-step-index {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffffff;
+  background: #1e3a8a;
+  margin-bottom: 0.75rem;
+}
+
+.process-step-card h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.about-cta-action {
+  padding: clamp(2.5rem, 8vh, 4rem) 1rem;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-cta-action h2 {
+  color: #ffffff;
+}
+
+.about-cta-action p {
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 auto 1.5rem;
+}
+
+.about-cta-action .about-btn-primary {
+  margin-right: 0;
+  color: #1e3a8a;
+  background: #ffffff;
+}
+
+.about-why-choose h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+.key-points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.key-point-card {
+  background: rgb(228, 228, 228);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.key-point-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.key-point-icon {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.key-point-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.key-point-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop */
+/* ─── CTA SECTION ─── */
+
+.about-cta-simple {
+  padding: clamp(3rem, 10vh, 5rem) 1rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../assets/About\ Header\ 1.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-cta-simple h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.about-cta-simple p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.98;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.about-cta-simple .about-btn-primary {
+  background: white;
+  color: #1e3a8a;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ────────────────────────────────────────── RESPONSIVE DESIGN ────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 110px;
+    /* Adjust for mobile navbar height */
+  }
+
+  .about-hero-simple {
+    padding: 70px 1rem 70px;
+    min-height: 420px;
+    background-attachment: scroll;
+  }
+
+  .about-hero-inner h1 {
+    font-size: 54px;
+  }
+
+  .about-tagline {
+    font-size: 1.1rem;
+  }
+
+  .about-intro {
+    font-size: 0.95rem;
+  }
+
+  .about-btn-primary,
+  .about-btn-outline {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .courses-grid-simple {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .key-points-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision-row {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 0.5rem 0;
+  }
+
+  .mission-vision-copy {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .vision-row {
+    margin-top: 0;
+  }
+
+  .vision-row .mission-vision-copy {
+    order: 1;
+  }
+
+  .vision-row .mission-vision-media {
+    order: 2;
+  }
+
+  .mission-vision-media img {
+    min-height: 240px;
+  }
+
+  .teachers-grid,
+  .results-grid,
+  .about-testimonials-grid,
+  .teaching-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-what-we-offer {
+    padding: 2rem 1rem;
+  }
+
+  .about-why-choose {
+    padding: 2rem 1rem;
+  }
+
+  .about-introduction-extended,
+  .about-mission-vision,
+  .about-teachers,
+  .about-results,
+  .about-testimonials,
+  .about-teaching-process {
+    padding: 2rem 1rem;
+  }
+
+  .about-cta-simple {
+    padding: 2.5rem 1rem;
+    min-height: 350px;
+    background-attachment: scroll;
+  }
+
+  .about-section-head {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding-top: 150px;
+    /* Adjust for mobile navbar height on small devices */
+  }
+
+  .about-hero-simple {
+    padding: 50px 1rem 50px;
+    min-height: 380px;
+    background-attachment: scroll;
+  }
+
+  .about-hero-inner h1 {
+    font-size: 44px;
+  }
+
+  .about-tagline {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .courses-grid-simple {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card-simple {
+    padding: 1.5rem 1rem;
+  }
+
+  .key-point-card {
+    padding: 1.5rem;
+  }
+
+  .key-point-icon {
+    font-size: 2rem;
+  }
+
+  .key-point-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-cta-simple {
+    padding: 2rem 1rem;
+    min-height: 300px;
+  }
+
+  .about-cta-simple h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-cta-simple p {
+    font-size: 0.95rem;
+  }
+
+  .mission-vision-card,
+  .teacher-card,
+  .result-card,
+  .about-testimonial-card,
+  .process-step-card {
+    padding: 1rem;
+  }
+
+  .teacher-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+  }
+
+  .teacher-card {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .teacher-details {
+    width: 100%;
+  }
+
+  .mission-vision-points {
+    padding-left: 1rem;
+    line-height: 1.6;
+    margin-top: 0.85rem;
+  }
+}

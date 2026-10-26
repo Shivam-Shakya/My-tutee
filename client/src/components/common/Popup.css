@@ -1,0 +1,371 @@
+
+/* ==============================
+   Popup Overlay
+============================== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  box-sizing: border-box;
+
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* ==============================
+   Popup Container
+============================== */
+.popup-container {
+  position: relative;
+
+  background: #fff;
+  border-radius: 15px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  width: 90%;
+  max-width: 430px;
+
+  height: auto;
+  max-height: calc(100dvh - 24px);
+
+  margin: 0;
+  box-sizing: border-box;
+
+  overflow: auto;
+  flex-shrink: 0;
+
+  animation: slideUp 0.4s ease-out;
+}
+
+/* ==============================
+   Popup Content
+============================== */
+.popup-content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Popup Image
+============================== */
+.popup-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-height: calc(100dvh - 40px);
+
+  object-fit: contain;
+  object-position: center;
+
+  padding: 7px;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.popup-container .popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  place-items: center;
+
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: #ffffff;
+  color: #333333;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 100;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+
+  transform: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.popup-close-btn:hover {
+  background: #ff8c00;
+  color: #fff;
+
+  transform: rotate(90deg);
+
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.popup-close-btn:active {
+  transform: scale(0.92);
+}
+
+.popup-close-btn:focus-visible {
+  outline: 2px solid #ff8c00;
+  outline-offset: 3px;
+}
+
+/* ==============================
+   Animations
+============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Tablet and Small Laptop
+============================== */
+@media (max-width: 769px) {
+  .popup-overlay {
+    padding: 12px;
+  }
+
+  .popup-container {
+    width: 95%;
+    max-width: 380px;
+
+    height: auto;
+    max-height: calc(100dvh - 24px);
+
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .popup-content {
+    width: 100%;
+  }
+
+  .popup-image {
+    width: 100%;
+    height: auto;
+
+    max-height: calc(100dvh - 40px);
+
+    object-fit: contain;
+    padding: 5px;
+  }
+
+  .popup-container .popup-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 25px;
+  }
+}
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .popup-container .popup-close-btn {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 22px;
+  }
+}
+
+/* ==============================
+   Mobile Devices
+============================== */
+@media (max-width: 480px) {
+  .popup-overlay {
+    padding: 10px;
+  }
+
+  .popup-container {
+    width: 100%;
+    max-width: 380px;
+
+    height: auto;
+    max-height: calc(100dvh - 20px);
+
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  .popup-content {
+    width: 100%;
+  }
+
+  .popup-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: calc(100dvh - 36px);
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 4px;
+  }
+
+  .popup-container .popup-close-btn {
+    top: 7px;
+    right: 7px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 21px;
+  }
+}
+
+/* ==============================
+   Extra Small Mobile Devices
+============================== */
+@media (max-width: 360px) {
+  .popup-overlay {
+    padding: 8px;
+  }
+
+  .popup-container {
+    width: 100%;
+    max-height: calc(100dvh - 16px);
+    border-radius: 8px;
+  }
+
+  .popup-image {
+    max-height: calc(100dvh - 28px);
+    padding: 3px;
+  }
+
+  .popup-container .popup-close-btn {
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    font-size: 20px;
+  }
+}
+
+/* ==============================
+   Touch Device Hover Handling
+============================== */
+@media (hover: none) {
+  .popup-close-btn:hover {
+    background: rgba(255, 255, 255, 0.96);
+    color: #333;
+
+    transform: none;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+  }
+
+  .popup-close-btn:active {
+    background: #ff8c00;
+    color: #fff;
+
+    transform: scale(0.92);
+  }
+}
+
+/* ==============================
+   Fallback for Older Browsers
+============================== */
+@supports not (height: 100dvh) {
+  .popup-overlay {
+    height: 100vh;
+  }
+
+  .popup-container {
+    max-height: calc(100vh - 24px);
+  }
+
+  .popup-image {
+    max-height: calc(100vh - 40px);
+  }
+
+  @media (max-width: 480px) {
+    .popup-container {
+      max-height: calc(100vh - 20px);
+    }
+
+    .popup-image {
+      max-height: calc(100vh - 36px);
+    }
+  }
+
+  @media (max-width: 360px) {
+    .popup-container {
+      max-height: calc(100vh - 16px);
+    }
+
+    .popup-image {
+      max-height: calc(100vh - 28px);
+    }
+  }
+}

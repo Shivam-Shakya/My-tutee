@@ -1,0 +1,195 @@
+.Acourses-section {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px;
+  background-color: rgb(247, 248, 248);
+}
+
+
+.Acourses-head {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.Acourses-title {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: #0b2447;
+  letter-spacing: 0.01em;
+}
+
+.Acourses-subtitle {
+  margin: 10px 0 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.Acourses-grids {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.Acourse-card {
+  min-height: 200px;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+}
+
+.Acourse-card:hover {
+  transform: translateY(-6px);
+}
+
+.Acourse-card-top {
+  display: grid;
+  gap: 10px;
+}
+
+.Acourse-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.Acourse-card h3 {
+  margin: 0;
+  font-size: 1.24rem;
+  line-height: 1.25;
+}
+
+.Acourse-card p {
+  margin: 0;
+  font-size: 0.91rem;
+  line-height: 1.62;
+  flex: 1;
+}
+
+.Acourse-card-foot {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.read-btn {
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid;
+  transition: background-color 0.24s ease, color 0.24s ease, border-color 0.24s ease;
+}
+
+.Acourse-card.gold {
+  background: linear-gradient(150deg, rgba(255, 140, 0, 0.96), rgba(230, 176, 106, 0.94));
+  color: #000000;
+  border: 1px solid #fdba74;
+}
+
+.Acourse-card.gold .Acourse-tag {
+  background: rgba(249, 215, 22, 0.16);
+  color: #000000;
+}
+
+.Acourse-card.gold .read-btn {
+  color: #000000;
+  border-color: #fdba74;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.Acourse-card.gold .read-btn:hover {
+  background: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+}
+
+.Acourse-card.dark {
+  background: linear-gradient(150deg, #1e3a8a, #2563eb 68%, #1d4ed8);
+  color: #ffffff;
+  border: 1px solid rgba(147, 197, 253, 0.36);
+}
+
+.Acourse-card.dark .Acourse-tag {
+  background: rgba(255, 255, 255, 0.16);
+  color: #dbeafe;
+}
+
+.Acourse-card.dark .read-btn {
+  color: #dbeafe;
+  border-color: rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.Acourse-card.dark .read-btn:hover {
+  background: #ffffff;
+  color: #1e40af;
+}
+
+@media (max-width: 1024px) {
+  .Acourses-section {
+    padding: 60px 20px;
+  }
+
+  .Acourses-grids {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .Acourse-card {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Acourses-section {
+    padding: 48px 16px;
+  }
+
+  .Acourses-head {
+    margin-bottom: 22px;
+  }
+
+  .Acourse-card h3 {
+    font-size: 1.08rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Acourses-section {
+    padding: 42px 12px;
+  }
+
+  .Acourses-grids {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .Acourse-card {
+    min-height: 175px;
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .Acourses-subtitle {
+    font-size: 0.92rem;
+  }
+}

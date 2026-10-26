@@ -1,0 +1,400 @@
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 60px 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h4,
+.footer-col h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col {
+  min-width: 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s, padding-left 0.3s;
+  display: inline-block;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+
+.footer-col ul li a:hover {
+  color: #FF8C00;
+  padding-left: 5px;
+}
+
+/* BRAND */
+.brand {
+  max-width: 300px;
+}
+
+.brand h2 {
+  font-size: 1.8rem;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 50%;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  background: #FF8C00;
+  border-color: #FF8C00;
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+/* NEWSLETTER */
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #1e293b;
+  color: #fff;
+}
+
+.newsletter input::placeholder {
+  color: #94a3b8;
+}
+
+.newsletter input:focus {
+  box-shadow: 0 0 0 2px #FF8C00;
+}
+
+.newsletter button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #FF8C00;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+  background: #E67E00;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE STYLES
+   ═══════════════════════════════════════════ */
+
+/* Large Tablets - 1024px */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .brand {
+    max-width: 250px;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+}
+
+/* Tablets - 768px */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 40px;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  .brand p {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-col p {
+    font-size: 0.9rem;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    padding: 18px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Tablets - 600px */
+@media (max-width: 600px) {
+  .footer {
+    padding: 35px 15px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 20px;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-col h4 {
+    font-size: 0.95rem;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.88rem;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .brand {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 90px;
+  }
+
+  .brand p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 8px;
+  }
+
+  .footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #FF8C00;
+  }
+
+  .footer-col ul {
+    display: block;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.88rem;
+  }
+
+  .footer-col ul li a:hover {
+    padding-left: 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .newsletter form {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
+    padding: 15px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Mobile - 360px */
+@media (max-width: 360px) {
+  .footer {
+    padding: 25px 12px 0;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  .footer-logo {
+    width: 80px;
+  }
+
+  .brand p {
+    font-size: 0.8rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.95rem;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    padding: 12px 8px;
+    font-size: 0.75rem;
+  }
+}

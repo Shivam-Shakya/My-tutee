@@ -1,0 +1,251 @@
+/* ===========================================
+   GLOBAL RESPONSIVE STYLES
+   =========================================== */
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+/* Hide on mobile/tablet/desktop */
+@media (max-width: 480px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Show only on specific screens */
+@media (min-width: 481px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px),
+(min-width: 769px) {
+  .show-tablet-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .show-desktop-only {
+    display: none !important;
+  }
+}
+
+/* Responsive Spacing */
+.mt-responsive {
+  margin-top: 24px;
+}
+
+.mb-responsive {
+  margin-bottom: 24px;
+}
+
+.pt-responsive {
+  padding-top: 24px;
+}
+
+.pb-responsive {
+  padding-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .mt-responsive {
+    margin-top: 16px;
+  }
+
+  .mb-responsive {
+    margin-bottom: 16px;
+  }
+
+  .pt-responsive {
+    padding-top: 16px;
+  }
+
+  .pb-responsive {
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mt-responsive {
+    margin-top: 12px;
+  }
+
+  .mb-responsive {
+    margin-bottom: 12px;
+  }
+
+  .pt-responsive {
+    padding-top: 12px;
+  }
+
+  .pb-responsive {
+    padding-bottom: 12px;
+  }
+}
+
+/* Flex Utilities */
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .flex-responsive {
+    gap: 12px;
+  }
+
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+}
+
+/* Grid Utilities */
+.grid-responsive {
+  display: grid;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid-responsive {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-responsive {
+    gap: 12px;
+  }
+}
+
+/* Text Utilities */
+.text-responsive {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .text-responsive {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+/* Button Base Responsive */
+button,
+.btn {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+@media (max-width: 480px) {
+
+  button,
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Form Elements Responsive */
+input,
+select,
+textarea {
+  font-size: 16px;
+  /* Prevents zoom on iOS */
+}
+
+/* Scrollbar for touch devices */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+}
